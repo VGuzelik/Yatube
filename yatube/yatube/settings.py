@@ -124,9 +124,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-# это не то же что и STATICFILES_DIRS?
-STATIC_URL = '/static/' # префикс для url
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/') # папка, в которой будет лежать статика
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'posts:index'
