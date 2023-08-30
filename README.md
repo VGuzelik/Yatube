@@ -51,4 +51,4 @@ python manage.py runserver
 </details>
 
 ## Разработчик:
-[Гузелик_Виктор](https://github.com/VGuzelik)
+[Гузелик Виктор](https://github.com/VGuzelik)
