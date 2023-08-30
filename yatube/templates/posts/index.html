@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+
+{% block content %}
+<main> 
+  <div class="container py-5">
+    {% include 'posts/switcher.html' %} 
+    {% for post in page_obj %}
+      {% include 'posts/resulting_selection.html'%}
+    {% if post.group %}   
+    <br><a href="{% url 'posts:group_list' post.group.slug %}" class="btn btn-primary">все записи группы</a>
+  {% endif %} 
+    {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %} 
+  </div>
+<div class="col-md-6 offset-md-4">
+{% include 'includes/paginator.html' %}
+</div>
+</main> 
+{% endblock %}

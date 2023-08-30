@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+<main>
+  <div class="container py-5">
+    <div class="row align-items-start">
+      <div class="col-4">
+        <img src="{% static 'img/about/author.jpg' %}"  width="350" height="350"/>
+      </div>
+      <div class="col-8">
+       <p>
+          <h3>Привет, я автор - студент факультета Бэкенд. Когорта № 50</h3> 
+       </p>
+       <p>
+          <-- так я себя ощущаю при прохождении курса.
+      </p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Custom 404{% endblock %}
+{% block content %}
+<main>
+  <div class="container py-5">
+    <div class="row align-items-start">
+      <div class="col-8">
+        <img src="{% static 'img/core/404.jpg' %}"  width="800" height="600"/>
+      </div>
+      <div class="col-4">
+       <p>
+          <h3>О, нет! Страница не найдена</h3> 
+       </p>
+       <p>
+            Почему?
+       </p>
+        <p>
+            Страницы с адресом {{ path }} не существует
+        </p>
+        <p>
+            Что делать?</p>
+        <p>
+        <a href="{% url 'posts:index' %}">Перейди на главную и попробуй еще разок</a>
+        </p>
+      </p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
